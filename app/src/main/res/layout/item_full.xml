@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="apodResponse"
+            type="com.bytelogs.obvious.model.ApodResponse" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <it.sephiroth.android.library.imagezoom.ImageViewTouch
+            android:scaleType="centerCrop"
+            android:id="@+id/image"
+            android:loadUrl="@{apodResponse.url}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+    </RelativeLayout>
+</layout>
